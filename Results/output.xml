@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.10.0 on win32)" generated="20220301 17:48:43.159" rpa="true" schemaversion="2">
+<suite id="s1" name="Debugging" source="C:\xampp\htdocs\github\Debugging">
+<suite id="s1-s1" name="Tests" source="C:\xampp\htdocs\github\Debugging\Tests">
+<suite id="s1-s1-s1" name="Debug-Browser" source="C:\xampp\htdocs\github\Debugging\Tests\debug-browser.robot">
+<test id="s1-s1-s1-t1" name="Search Bing">
+<kw name="Open Bing">
+<kw name="Open Available Browser">
+<arg>${BING_URL}</arg>
+<msg timestamp="20220301 17:48:43.273" level="FAIL">No keyword with name 'Open Available Browser' found.</msg>
+<status status="FAIL" starttime="20220301 17:48:43.273" endtime="20220301 17:48:43.273"/>
+</kw>
+<status status="FAIL" starttime="20220301 17:48:43.270" endtime="20220301 17:48:43.277"/>
+</kw>
+<kw name="Perform Search">
+<arg>Formulated Automation Github</arg>
+<status status="NOT RUN" starttime="20220301 17:48:43.279" endtime="20220301 17:48:43.279"/>
+</kw>
+<status status="FAIL" starttime="20220301 17:48:43.269" endtime="20220301 17:48:43.281">No keyword with name 'Open Available Browser' found.</status>
+</test>
+<kw name="Teardown Actions" type="TEARDOWN">
+<kw name="Get Environment Variable" library="OperatingSystem">
+<var>${debug}</var>
+<arg>ROBOT_DEBUG</arg>
+<arg>FALSE</arg>
+<doc>Returns the value of an environment variable with the given name.</doc>
+<msg timestamp="20220301 17:48:43.286" level="INFO">${debug} = TRUE</msg>
+<status status="PASS" starttime="20220301 17:48:43.285" endtime="20220301 17:48:43.286"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${debug}' == 'TRUE' and '${SUITE_STATUS}' == 'FAIL'</arg>
+<arg>Pause For Debug</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Pause For Debug">
+<kw name="Pause Execution" library="Dialogs">
+<arg>Paused execution due to failure, click OK to continue teardown</arg>
+<doc>Pauses test execution until user clicks ``Ok`` button.</doc>
+<status status="PASS" starttime="20220301 17:48:43.288" endtime="20220301 17:48:45.871"/>
+</kw>
+<status status="PASS" starttime="20220301 17:48:43.288" endtime="20220301 17:48:45.871"/>
+</kw>
+<status status="PASS" starttime="20220301 17:48:43.286" endtime="20220301 17:48:45.871"/>
+</kw>
+<kw name="Close All Browsers">
+<msg timestamp="20220301 17:48:45.880" level="FAIL">No keyword with name 'Close All Browsers' found.</msg>
+<status status="FAIL" starttime="20220301 17:48:45.879" endtime="20220301 17:48:45.880"/>
+</kw>
+<status status="FAIL" starttime="20220301 17:48:43.285" endtime="20220301 17:48:45.882">No keyword with name 'Close All Browsers' found.</status>
+</kw>
+<doc>Opens the browser and searches Bing</doc>
+<status status="FAIL" starttime="20220301 17:48:43.199" endtime="20220301 17:48:45.882">Suite teardown failed:
+No keyword with name 'Close All Browsers' found.</status>
+</suite>
+<status status="FAIL" starttime="20220301 17:48:43.190" endtime="20220301 17:48:45.905"/>
+</suite>
+<status status="FAIL" starttime="20220301 17:48:43.159" endtime="20220301 17:48:45.944"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Debugging">Debugging</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Tests">Debugging.Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Debug-Browser">Debugging.Tests.Debug-Browser</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220301 17:48:43.205" level="ERROR">Error in file 'C:\xampp\htdocs\github\Debugging\Tests\debug-browser.robot' on line 3: Importing library 'RPA.Browser.Selenium' failed: ModuleNotFoundError: No module named 'RPA'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\Vian A. Noori\AppData\Local\Programs\Python\Python310\Scripts\robot.exe
+  C:\Users\Vian A. Noori\AppData\Local\Programs\Python\Python310\python310.zip
+  C:\Users\Vian A. Noori\AppData\Local\Programs\Python\Python310\DLLs
+  C:\Users\Vian A. Noori\AppData\Local\Programs\Python\Python310\lib
+  C:\Users\Vian A. Noori\AppData\Local\Programs\Python\Python310
+  C:\Users\Vian A. Noori\AppData\Local\Programs\Python\Python310\lib\site-packages</msg>
+</errors>
+</robot>
