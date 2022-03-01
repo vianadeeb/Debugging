@@ -1,4 +1,4 @@
-# DebugLibrary
+# Debug
 Debugging in Robot Framework
 # Running the code
 # Windows
